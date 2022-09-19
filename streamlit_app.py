@@ -143,8 +143,8 @@ class TravelOptions:
 
     def send_to_user_email(self, user_email):
 
-            email_sender = 'travel.app.flyer@gmail.com'
-            email_password = 'efotfjtutkrsxzby'
+            email_sender = 'TravelSetMe@gmail.com'
+            email_password = 'hfpnwbknyywzyihs'
             email_receiver = user_email
 
             subject = 'Check out your travel recommendations for ' + selected_city
