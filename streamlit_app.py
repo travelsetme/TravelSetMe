@@ -55,7 +55,7 @@ class TravelOptions:
 
         set_background(r"my_trip.png")
 
-        st.title("Travel Planning Application")
+        st.title("Travel Set Me")
         # gc = geonamescache.GeonamesCache()
         # cities = gc.get_cities()
 
