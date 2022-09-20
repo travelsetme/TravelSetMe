@@ -205,7 +205,7 @@ class TravelOptions:
 
 class Flights():
     
-    def empty_datafarme(my_df=None):
+    def empty_dataframe(my_df=None):
         if(my_df is None):
             my_df = pd.DataFrame()
         #stuff to do if it's not empty
@@ -223,7 +223,7 @@ class Flights():
 
         global df_airports_for_email
 
-        df_airports_for_email = empty_datafarme(my_df=None)
+        df_airports_for_email = empty_dataframe(my_df=None)
 
 
         # print(city)
@@ -324,7 +324,7 @@ class Flights():
 
 class Hotels():
     
-    def empty_datafarme(my_df=None):
+    def empty_dataframe(my_df=None):
         if(my_df is None):
             my_df = pd.DataFrame()
         #stuff to do if it's not empty
@@ -339,7 +339,7 @@ class Hotels():
         global df_hotels_for_email
         global df_hotels_string
 
-        df_hotels_for_email = empty_datafarme(my_df=None)
+        df_hotels_for_email = empty_dataframe()
 
         if city == 'New York':
             city = "60763"
@@ -457,7 +457,7 @@ class Hotels():
 
 class Restorants():
     
-    def empty_datafarme(my_df=None):
+    def empty_dataframe(my_df=None):
         if(my_df is None):
             my_df = pd.DataFrame()
         #stuff to do if it's not empty
@@ -472,7 +472,7 @@ class Restorants():
         global df_restorants_for_email
         global df_restorants_string
 
-        df_restorants_for_email = empty_datafarme(my_df=None)
+        df_restorants_for_email = empty_dataframe()
 
 
         if city == 'New York':
