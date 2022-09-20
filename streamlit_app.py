@@ -80,7 +80,7 @@ class TravelOptions:
 
             return check_email
 
-         form = st.form(key='my_form',clear_on_submit=True)
+        form = st.form(key='my_form',clear_on_submit=True)
 
 
         selected_city = form.selectbox(
