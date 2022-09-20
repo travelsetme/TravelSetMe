@@ -152,8 +152,7 @@ class TravelOptions:
 
             subject = 'Check out your travel recommendations for ' + selected_city
             flights_list = ' '.join(map(str,df_list_airports))
-            #body = "Your Recommended Flights - " + flights_list + "\n" + "Your Recommended Hotels  - " + flights_list + "\n" + "Your Recommended Restorants - " + flights_list
-
+            
 
             if df_airports_for_email.empty:
                 flights_output = 'no flights available'
@@ -176,7 +175,7 @@ class TravelOptions:
             else:
                 restorants_output = build_table(df_restorants_for_email, 'blue_light')
 
-            body = "Your Recommended Travel Information Are - \n\n\n" + "\n\n FLIGHTS \n\n " + flights_output + "\n\n HOTELS \n\n " + hotels_output + "\n\n RESTORANTS \n\n " + restorants_output
+            body = "\n\n\n Your Recommended Travel Information Are - \n\n\n" + "\n\n\n FLIGHTS \n\n\n " + flights_output + "\n\n HOTELS \n\n " + hotels_output + "\n\n RESTORANTS \n\n " + restorants_output
             body_content = body
             message = MIMEMultipart()
             message.attach(MIMEText(body_content, "html"))
