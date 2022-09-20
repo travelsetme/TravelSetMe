@@ -135,7 +135,7 @@ class TravelOptions:
 
 
 
-        submit_button = form.form_submit_button(label='Submit',form_random_key = random.randint(1,1000))
+        submit_button = form.form_submit_button(label='Submit',help=None, on_click=None,form_random_key = random.randint(1,1000))
 
 
 
