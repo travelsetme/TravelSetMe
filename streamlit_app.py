@@ -206,7 +206,8 @@ class Flights():
         # print(city)
         url = "https://travel-advisor.p.rapidapi.com/airports/search"
 
-        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        uri = 'mongodb+srv://tsafrir:tsafrir@cluster0.frf1eeg.mongodb.net/?retryWrites=true&w=majority'
+        myclient = pymongo.MongoClient(uri)
         mydb = myclient["travel_app"]
         mycol = mydb["Flights"]
 
@@ -316,7 +317,8 @@ class Hotels():
 
         url = "https://travel-advisor.p.rapidapi.com/airports/search"
 
-        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        uri = 'mongodb+srv://tsafrir:tsafrir@cluster0.frf1eeg.mongodb.net/?retryWrites=true&w=majority'
+        myclient = pymongo.MongoClient(uri)
         mydb = myclient["travel_app"]
         mycol = mydb["Hotels"]
 
@@ -437,7 +439,8 @@ class Restorants():
         elif city == 'Barcelona':
             city = "1465497"
 
-        myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+        uri = 'mongodb+srv://tsafrir:tsafrir@cluster0.frf1eeg.mongodb.net/?retryWrites=true&w=majority'
+        myclient = pymongo.MongoClient(uri)
         mydb = myclient["travel_app"]
         mycol = mydb["Restorants"]
 
