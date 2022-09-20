@@ -28,7 +28,21 @@ class TravelOptions:
     def __init__(self):
 
         self.get_user_input()
-
+        
+    def empty_dataframe(my_df=None):
+        if(my_df is None):
+            my_df = pd.DataFrame()
+        #stuff to do if it's not empty
+        if(len(my_df) != 0):
+            print(my_df)
+        elif(len(my_df) == 0):
+            print("Nothing")
+        return my_df    
+    
+    global default_empty_dataframe
+    
+    default_empty_dataframe = empty_dataframe(None)
+    
     def get_user_input(self):
         global selected_city
         global selected_flight_budget
@@ -223,7 +237,7 @@ class Flights():
 
         global df_airports_for_email
 
-        df_airports_for_email = empty_dataframe(my_df=None)
+        df_airports_for_email = default_empty_dataframe
 
 
         # print(city)
@@ -339,7 +353,7 @@ class Hotels():
         global df_hotels_for_email
         global df_hotels_string
 
-        df_hotels_for_email = empty_dataframe()
+        df_hotels_for_email = default_empty_dataframe
 
         if city == 'New York':
             city = "60763"
@@ -472,7 +486,7 @@ class Restorants():
         global df_restorants_for_email
         global df_restorants_string
 
-        df_restorants_for_email = empty_dataframe()
+        df_restorants_for_email = default_empty_dataframe
 
 
         if city == 'New York':
