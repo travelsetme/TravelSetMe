@@ -20,6 +20,16 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from pretty_html_table import build_table
 import string
+import multiprocessing
+
+class Process(multiprocessing.Process):
+    def __init__(self, id):
+        super(Process, self).__init__()
+        self.id = id
+                 
+    def run(self):
+        time.sleep(1)
+
 
 
 
