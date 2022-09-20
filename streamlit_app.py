@@ -24,6 +24,7 @@ class TravelOptions:
     def __init__(self):
 
         self.get_user_input()
+        self.clear_widgets()
 
     def get_user_input(self):
         global selected_city
@@ -140,7 +141,13 @@ class TravelOptions:
             time.sleep(5)
         st.success('Done! Please Check Your Email For Your Vacation Recommendations for ' +  selected_city + '(Your Flights Are Listed Below) ')
         st.balloons()
-
+    
+    def clear_widgets(self):
+        selected_city = st.empty()
+        selected_flight_budget = st.empty()
+        selected_hotel_budget = st.empty()
+        selected_restorants_budget = st.empty()
+    
     def send_to_user_email(self, user_email):
 
             email_sender = 'TravelSetMe@gmail.com'
