@@ -100,10 +100,10 @@ class TravelOptions:
         global form_random_key
         
         letters = string.ascii_lowercase
-        letters_random = ''.join(random.choice(letters) for i in range(10))
+        #letters_random = ''.join(random.choice(letters) for i in range(10))
         form_random_key = 'my_form' + letters_random
         
-        print(form_random_key)
+        st.write(form_random_key)
             
         form = st.form(key=f"{form_random_key}")
             
