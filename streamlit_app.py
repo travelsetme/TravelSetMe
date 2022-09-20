@@ -219,15 +219,7 @@ class TravelOptions:
 
 class Flights():
     
-    def empty_dataframe(my_df=None):
-        if(my_df is None):
-            my_df = pd.DataFrame()
-        #stuff to do if it's not empty
-        if(len(my_df) != 0):
-            print(my_df)
-        elif(len(my_df) == 0):
-            print("Nothing")
-        return my_df 
+   
 
     def find_flight(self, city):
 
@@ -338,15 +330,7 @@ class Flights():
 
 class Hotels():
     
-    def empty_dataframe(my_df=None):
-        if(my_df is None):
-            my_df = pd.DataFrame()
-        #stuff to do if it's not empty
-        if(len(my_df) != 0):
-            print(my_df)
-        elif(len(my_df) == 0):
-            print("Nothing")
-        return my_df 
+ 
 
     def find_hotels(self, city):
 
@@ -471,15 +455,7 @@ class Hotels():
 
 class Restorants():
     
-    def empty_dataframe(my_df=None):
-        if(my_df is None):
-            my_df = pd.DataFrame()
-        #stuff to do if it's not empty
-        if(len(my_df) != 0):
-            print(my_df)
-        elif(len(my_df) == 0):
-            print("Nothing")
-        return my_df 
+  
 
     def find_restorants(self, city):
 
