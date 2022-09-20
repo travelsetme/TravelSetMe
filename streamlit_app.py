@@ -104,7 +104,7 @@ class TravelOptions:
             return check_email
 
         question_number = 1000
-        form = st.form(key='my_form')
+        form = st.form(key='my_form',clear_on_submit=True)
         user_email = form.text_input(label='Enter Your Email', key=question_number)
         submit_button = form.form_submit_button(label='Submit')
 
