@@ -204,6 +204,16 @@ class TravelOptions:
 
 
 class Flights():
+    
+    def empty_datafarme(my_df=None):
+    if(my_df is None):
+        my_df = pd.DataFrame()
+    #stuff to do if it's not empty
+    if(len(my_df) != 0):
+        print(my_df)
+    elif(len(my_df) == 0):
+        print("Nothing")
+    return my_df 
 
     def find_flight(self, city):
 
@@ -213,7 +223,7 @@ class Flights():
 
         global df_airports_for_email
 
-        df_airports_for_email = ''
+        df_airports_for_email = empty_datafarme
 
 
         # print(city)
@@ -313,13 +323,23 @@ class Flights():
 
 
 class Hotels():
+    
+    def empty_datafarme(my_df=None):
+    if(my_df is None):
+        my_df = pd.DataFrame()
+    #stuff to do if it's not empty
+    if(len(my_df) != 0):
+        print(my_df)
+    elif(len(my_df) == 0):
+        print("Nothing")
+    return my_df 
 
     def find_hotels(self, city):
 
         global df_hotels_for_email
         global df_hotels_string
 
-        df_hotels_for_email = 'no hotels found'
+        df_hotels_for_email = empty_datafarme
 
         if city == 'New York':
             city = "60763"
@@ -436,13 +456,23 @@ class Hotels():
                 st.write('Hotels API didn`t return results')
 
 class Restorants():
+    
+    def empty_datafarme(my_df=None):
+    if(my_df is None):
+        my_df = pd.DataFrame()
+    #stuff to do if it's not empty
+    if(len(my_df) != 0):
+        print(my_df)
+    elif(len(my_df) == 0):
+        print("Nothing")
+    return my_df 
 
     def find_restorants(self, city):
 
         global df_restorants_for_email
         global df_restorants_string
 
-        df_restorants_for_email ='no restorants found'
+        df_restorants_for_email = empty_datafarme
 
 
         if city == 'New York':
