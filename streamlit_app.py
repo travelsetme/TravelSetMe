@@ -98,10 +98,10 @@ class TravelOptions:
         
         form_random_key = random.randint(1,1000)
             
-        form = st.form(key=f"form_one_{form_random_key}")
+        #form = st.form(key=f"form_one_{form_random_key}")
             
 
-        #form = st.form(key='my_form',clear_on_submit=True)
+        form = st.form(key='my_form',clear_on_submit=True)
 
 
         selected_city = form.selectbox(
