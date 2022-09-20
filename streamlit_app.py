@@ -223,7 +223,7 @@ class Flights():
 
         global df_airports_for_email
 
-        df_airports_for_email = empty_datafarme
+        df_airports_for_email = empty_datafarme(my_df=None)
 
 
         # print(city)
@@ -339,7 +339,7 @@ class Hotels():
         global df_hotels_for_email
         global df_hotels_string
 
-        df_hotels_for_email = empty_datafarme
+        df_hotels_for_email = empty_datafarme(my_df=None)
 
         if city == 'New York':
             city = "60763"
@@ -472,7 +472,7 @@ class Restorants():
         global df_restorants_for_email
         global df_restorants_string
 
-        df_restorants_for_email = empty_datafarme
+        df_restorants_for_email = empty_datafarme(my_df=None)
 
 
         if city == 'New York':
