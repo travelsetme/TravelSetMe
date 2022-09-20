@@ -155,6 +155,7 @@ class TravelOptions:
                 letters = string.ascii_lowercase
                 letters_random = ''.join(random.choice(letters) for i in range(10))
                 form_random_key = 'my_form' + letters_random
+                form = st.form(key=f"{form_random_key}")
 
                 if check(user_email) == 'N':
                     st.write('The email is invalid please type again and press submit')
