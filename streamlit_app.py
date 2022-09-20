@@ -95,12 +95,13 @@ class TravelOptions:
             return check_email
         
         global letters
+        global letters_random
         
         global form_random_key
         
         letters = string.ascii_lowercase
-        
-        form_random_key = 'my_form' + letters
+        letters_random = ''.join(random.choice(letters) for i in range(10))
+        form_random_key = 'my_form' + letters_random
             
         form = st.form(key=f"{form_random_key}")
             
@@ -148,8 +149,8 @@ class TravelOptions:
             if submit_button:
                 
                 letters = string.ascii_lowercase
-        
-                form_random_key = 'my_form' + letters
+                letters_random = ''.join(random.choice(letters) for i in range(10))
+                form_random_key = 'my_form' + letters_random
 
                 if check(user_email) == 'N':
                     st.write('The email is invalid please type again and press submit')
