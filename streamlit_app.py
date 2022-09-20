@@ -61,34 +61,8 @@ class TravelOptions:
         set_background(r"happy-couple-beach-vacation-fdu2ygmkhgf3canw.png")
 
         st.title("Travel Planning Application")
-        # gc = geonamescache.GeonamesCache()
-        # cities = gc.get_cities()
-
-        selected_city = st.selectbox(
-            'Enter Your Travel City : ',
-            ('New York','San Francisco','Honolulu', 'Bankok', 'Barcelona', 'Dubai', 'Paris', 'london', 'Tel Aviv'))
-
-        ############################### flight budget choose ########################
-
-        global selected_flight_budget
-
-        selected_flight_budget = st.selectbox(
-            'Enter Your Flight Budget : ',
-            ('500', '1000', '1500'))
-
-        ########################### Hotel Budget Choose ######################################
-        global selected_hotel_budget
-
-        selected_hotel_budget = st.selectbox(
-            'Enter Your Hotel Budget : ',
-            ('50', '100', '150'))
-        ########################### Restorants Budget Choose ######################################
-        global selected_restorants_budget
-
-        selected_restorants_budget = st.selectbox(
-            'Enter Your Restorant Budget : ',
-            ('50', '100', '150'))
-        ########################### Enter Email ######################################
+       
+       
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
         check_email = 'N'
         keys = random.sample(range(1000, 9999), 1)
@@ -106,9 +80,42 @@ class TravelOptions:
 
             return check_email
 
-        form = st.form(key='my_form')
+         form = st.form(key='my_form',clear_on_submit=True)
+
+
+        selected_city = form.selectbox(
+            'Enter Your Travel City : ',
+            ('New York', 'San Francisco', 'Honolulu', 'Bankok', 'Barcelona', 'Dubai', 'Paris', 'london', 'Tel Aviv'))
+
+        ############################### flight budget choose ########################
+
+        global selected_flight_budget
+
+        selected_flight_budget = form.selectbox(
+            'Enter Your Flight Budget : ',
+            ('500', '1000', '1500'))
+
+        ########################### Hotel Budget Choose ######################################
+        global selected_hotel_budget
+
+        selected_hotel_budget = form.selectbox(
+            'Enter Your Hotel Budget : ',
+            ('50', '100', '150'))
+        ########################### Restorants Budget Choose ######################################
+        global selected_restorants_budget
+
+        selected_restorants_budget = form.selectbox(
+            'Enter Your Restorant Budget : ',
+            ('50', '100', '150'))
+
         user_email = form.text_input(label='Enter Your Email', key=1)
+
+
+
+
+
         submit_button = form.form_submit_button(label='Submit')
+
 
 
         # user_email = st.text_input('Please Enter Your Email :')
