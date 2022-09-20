@@ -101,7 +101,7 @@ class TravelOptions:
         
         letters = string.ascii_lowercase
         letters_random = ''.join(random.choice(letters) for i in range(10))
-        form_random_key = 'my_form' + letters
+        form_random_key = 'my_form' + letters_random
         
         st.write(form_random_key)
             
