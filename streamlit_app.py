@@ -224,6 +224,7 @@ class TravelOptions:
             body_content = body
             message = MIMEMultipart()
             message.attach(MIMEText(body_content, "html"))
+            message.subject = 'Travel Suggestions for :' + selected_city
             msg_body = message.as_string()
 
             em = EmailMessage()
