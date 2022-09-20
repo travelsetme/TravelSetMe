@@ -144,9 +144,9 @@ class TravelOptions:
 
         submit_counter = 0
         
-        if submit_counter == 0;
+        if submit_counter == 0:
             submit_button = form.form_submit_button(label='Submit')
-            submit_counter = submit_counter + 1;
+            submit_counter = submit_counter + 1
         else:
             letters = string.ascii_lowercase
             letters_random = ''.join(random.choice(letters) for i in range(10))
