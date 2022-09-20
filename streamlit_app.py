@@ -140,12 +140,15 @@ class TravelOptions:
 
         user_email = form.text_input(label='Enter Your Email', key=1)
 
-
+        
 
         submit_counter = 0
         
+        submit_button = form.form_submit_button(label='Submit')
+        
         if submit_counter == 0:
-            submit_button = form.form_submit_button(label='Submit')
+            letters = string.ascii_lowercase
+            form_random_key = 'my_form' + letters
             submit_counter = submit_counter + 1
         else:
             letters = string.ascii_lowercase
