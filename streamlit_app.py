@@ -90,13 +90,15 @@ class TravelOptions:
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
         check_email = 'N'
         keys = random.sample(range(1000, 9999), 1)
-
+        ################################### check email format #########################################################
+            
         def check(email):
+            
+            email = email.strip()
 
             if (re.fullmatch(regex, email)):
 
                 check_email = 'Y'
-
 
             else:
 
@@ -192,10 +194,12 @@ class TravelOptions:
     def Process_User_Input(self):
 
         with st.spinner('Your Vacation Is On Its Way,Please Wait...'):
+            
             app_flights = Flights().find_flight(selected_city)
             app_hotels = Hotels().find_hotels(selected_city)
             app_restorants = Restorants().find_restorants(selected_city)
             time.sleep(5)
+            
         st.success('Done! Please Check Your Email For Your Vacation Recommendations for ' +  selected_city + '(Your Flights Are Listed Below) ')
         st.balloons()
 
@@ -249,7 +253,7 @@ class TravelOptions:
                 smtp.login(email_sender, email_password)
                 smtp.sendmail(email_sender, email_receiver, msg_body)
 
-        #print('Application process finished !')
+        
 
 
 class Flights():
