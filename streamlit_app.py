@@ -94,9 +94,11 @@ class TravelOptions:
 
             return check_email
         
-        for i in range(3):
+        
+        
+        form_random_key = random.randint(1,1000)
             
-            form = st.form(key=f"form_one_{i}")
+        form = st.form(key=f"form_one_{form_random_key}")
             
 
         #form = st.form(key='my_form',clear_on_submit=True)
@@ -133,7 +135,7 @@ class TravelOptions:
 
 
 
-        submit_button = form.form_submit_button(label='Submit')
+        submit_button = form.form_submit_button(label='Submit',form_random_key = random.randint(1,1000))
 
 
 
