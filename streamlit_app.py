@@ -58,7 +58,7 @@ class TravelOptions:
                     ''' % bin_str
             st.markdown(page_bg_img, unsafe_allow_html=True)
 
-        set_background(r"C:\Python_Project\my_trip.png")
+        set_background(r"happy-couple-beach-vacation-fdu2ygmkhgf3canw.png")
 
         st.title("Travel Planning Application")
         # gc = geonamescache.GeonamesCache()
