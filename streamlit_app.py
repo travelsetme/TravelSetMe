@@ -237,7 +237,7 @@ class TravelOptions:
 
             with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
                 smtp.login(email_sender, email_password)
-                smtp.sendmail(email_sender, email_receiver, msg_body )
+                smtp.sendmail(email_sender, email_receiver, msg_body,message.subject )
 
         #print('Application process finished !')
 
