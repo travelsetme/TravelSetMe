@@ -100,7 +100,7 @@ class TravelOptions:
         global form_random_key
         
         letters = string.ascii_lowercase
-        #letters_random = ''.join(random.choice(letters) for i in range(10))
+        letters_random = ''.join(random.choice(letters) for i in range(10))
         form_random_key = 'my_form' + letters
         
         st.write(form_random_key)
