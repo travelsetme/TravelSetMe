@@ -99,9 +99,11 @@ class TravelOptions:
         
         global form_random_key
         
+        
+        
         letters = string.ascii_lowercase
-        letters_random = ''.join(random.choice(letters) for i in range(10))
-        form_random_key = 'my_form' + letters_random
+        #letters_random = ''.join(random.choice(letters) for i in range(10))
+        form_random_key = 'my_form' + letters
         
         st.write(form_random_key)
             
@@ -150,9 +152,9 @@ class TravelOptions:
         for i in keys:
             if submit_button:
                 
-                #letters = string.ascii_lowercase
-                #letters_random = ''.join(random.choice(letters) for i in range(10))
-                #form_random_key = 'my_form' + letters_random
+                letters = string.ascii_lowercase
+                letters_random = ''.join(random.choice(letters) for i in range(10))
+                form_random_key = 'my_form' + letters_random
 
                 if check(user_email) == 'N':
                     st.write('The email is invalid please type again and press submit')
