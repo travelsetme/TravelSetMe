@@ -94,10 +94,12 @@ class TravelOptions:
 
             return check_email
         
+        global letters
         
+        global form_random_key
         
         letters = string.ascii_lowercase
-        #print ( ''.join(random.choice(letters) for i in range(10)) )
+        
         form_random_key = 'my_form' + letters
             
         form = st.form(key=f"{form_random_key}")
@@ -144,7 +146,10 @@ class TravelOptions:
         # user_email = st.text_input('Please Enter Your Email :')
         for i in keys:
             if submit_button:
-                # print(check(user_email))
+                
+                letters = string.ascii_lowercase
+        
+                form_random_key = 'my_form' + letters
 
                 if check(user_email) == 'N':
                     st.write('The email is invalid please type again and press submit')
