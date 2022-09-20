@@ -142,9 +142,17 @@ class TravelOptions:
 
 
 
-
-
-        submit_button = form.form_submit_button(label='Submit')
+        submit_counter = 0
+        
+        if submit_counter == 0;
+            submit_button = form.form_submit_button(label='Submit')
+            submit_counter = submit_counter + 1;
+        else:
+            letters = string.ascii_lowercase
+            letters_random = ''.join(random.choice(letters) for i in range(10))
+            form_random_key = 'my_form' + letters_random
+            form = st.form(key=f"{form_random_key}") 
+            
 
 
 
