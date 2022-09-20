@@ -96,7 +96,9 @@ class TravelOptions:
         
         
         
-        form_random_key = 'my_form' + str(random.randint(1,1000))
+        letters = string.ascii_lowercase
+        #print ( ''.join(random.choice(letters) for i in range(10)) )
+        form_random_key = 'my_form' + letters
             
         form = st.form(key=f"{form_random_key}")
             
