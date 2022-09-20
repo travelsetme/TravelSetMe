@@ -79,8 +79,15 @@ class TravelOptions:
                 check_email = 'N'
 
             return check_email
+        
+        for i in range(3):
+            #title = st.title(data['tasks'][i]['name'])
+            form = st.form(key=f"form_one_{i}")
+            #input = form.text_input(label=f"{data['tasks'][i]['inputs']}", key=f"input1_{i}")
+            #input_two = form.text_input(label=f"{data['tasks'][i]['inputs_two']}", key=f"input2_{i}")
+            #form.form_submit_button()
 
-        form = st.form(key='my_form',clear_on_submit=True)
+        #form = st.form(key='my_form',clear_on_submit=True)
 
 
         selected_city = form.selectbox(
