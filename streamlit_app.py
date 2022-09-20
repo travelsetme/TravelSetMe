@@ -147,6 +147,7 @@ class TravelOptions:
         selected_flight_budget = st.empty()
         selected_hotel_budget = st.empty()
         selected_restorants_budget = st.empty()
+        user_email = st.empty()
     
     def send_to_user_email(self, user_email):
 
