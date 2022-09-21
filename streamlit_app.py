@@ -186,6 +186,7 @@ class TravelOptions:
                 else:
                     self.Process_User_Input()
                     self.send_to_user_email(user_email)
+                    form = st.empty()
                     break
 
 
