@@ -294,7 +294,7 @@ class Flights():
         querystring = {"query": city, "locale": "en_US"}
 
         headers = {
-            'X-RapidAPI-Key': 'aedd40ee0emsh7abd403f44557b7p1236b2jsn91e7e9c7abf6',
+            "X-RapidAPI-Key": "fe42155845mshc3b183a04c42514p1fc16djsnbb15492b29c4",
             "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
         }
 
@@ -410,7 +410,7 @@ class Hotels():
                        "currency": "USD", "order": "asc", "limit": "10", "sort": "recommended", "lang": "en_US"}
 
         headers = {
-            'X-RapidAPI-Key': 'aedd40ee0emsh7abd403f44557b7p1236b2jsn91e7e9c7abf6',
+            "X-RapidAPI-Key": "fe42155845mshc3b183a04c42514p1fc16djsnbb15492b29c4",
             "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
         }
 
@@ -534,7 +534,7 @@ class Restorants():
                        "open_now": "false", "lang": "en_US"}
 
         headers = {
-            'X-RapidAPI-Key': 'aedd40ee0emsh7abd403f44557b7p1236b2jsn91e7e9c7abf6',
+            "X-RapidAPI-Key": "fe42155845mshc3b183a04c42514p1fc16djsnbb15492b29c4",
             "X-RapidAPI-Host": "travel-advisor.p.rapidapi.com"
         }
 
