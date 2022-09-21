@@ -83,9 +83,9 @@ class TravelOptions:
                     ''' % bin_str
             st.markdown(page_bg_img, unsafe_allow_html=True)
 
-        set_background(r"happy-couple-beach-vacation-fdu2ygmkhgf3canw.png")
+        set_background(r"vacation_travel_picture.png")
 
-        st.title("Travel Planning Application")
+        st.title("Travel All In One")
        
        
         regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
