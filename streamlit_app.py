@@ -21,7 +21,7 @@ from email.mime.multipart import MIMEMultipart
 from pretty_html_table import build_table
 import string
 import multiprocessing
-from streamlit import caching
+
 
 class Process(multiprocessing.Process):
     def __init__(self, id):
@@ -120,7 +120,7 @@ class TravelOptions:
         
         #st.write(form_random_key)
             
-        form = st.form(key=f"{form_random_key}")
+        form = st.form(key=f"{form_random_key}", clear_on_submit=True)
             
 
         #form = st.form(key='my_form',clear_on_submit=True)
@@ -188,7 +188,8 @@ class TravelOptions:
                     self.Process_User_Input()
                     self.send_to_user_email(user_email)
                     form = st.empty()
-                    caching.clear_cache()
+                    submit_button = st.empty()
+                    
                     letters = string.ascii_lowercase
                     letters_random = ''.join(random.choice(letters) for i in range(10))
                     form_random_key = 'my_form' + letters_random
