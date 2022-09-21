@@ -187,6 +187,10 @@ class TravelOptions:
                     self.Process_User_Input()
                     self.send_to_user_email(user_email)
                     form = st.empty()
+                    letters = string.ascii_lowercase
+                    letters_random = ''.join(random.choice(letters) for i in range(10))
+                    form_random_key = 'my_form' + letters_random
+                    form = st.form(key=f"{form_random_key}")
                     break
 
 
