@@ -120,7 +120,7 @@ class TravelOptions:
         
         #st.write(form_random_key)
             
-        form = st.form(key=f"{form_random_key}", clear_on_submit=True)
+        form = st.form(key=f"{form_random_key}")
             
 
         #form = st.form(key='my_form',clear_on_submit=True)
