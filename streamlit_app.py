@@ -203,9 +203,17 @@ class TravelOptions:
 
         with st.spinner('Your Vacation Is On Its Way,Please Wait...'):
             
-            app_flights = Flights().find_flight(selected_city)
-            app_hotels = Hotels().find_hotels(selected_city)
-            app_restorants = Restorants().find_restorants(selected_city)
+            app_flights = Process(Flights().find_flight(selected_city))
+            app_hotels = Process(Hotels().find_hotels(selected_city))
+            app_restorants = Process(Restorants().find_restorants(selected_city))
+
+            app_flights.start()
+            app_hotels.start()
+            app_restorants.start()
+            app_flights.join()
+            app_hotels.join()
+            app_restorants.join()
+            
             time.sleep(5)
             
         st.success('Done! Please Check Your Email For Your Vacation Recommendations for ' +  selected_city + '(Your Flights Are Listed Below) ')
